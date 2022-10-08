@@ -22,6 +22,4 @@ import { FooterComponent } from "./footer/footer.component";
         FooterComponent
     ]
 })
-export class NavegacaoModule {
-
-}
+export class NavegacaoModule {}
