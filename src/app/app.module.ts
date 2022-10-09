@@ -17,7 +17,7 @@ import { NavegacaoModule } from './navegacao/navegacao-module';
   declarations: [
     AppComponent,
     SobreComponent,
-    CadastroComponent
+    CadastroComponent,
   ],
   imports: [
     BrowserModule,
