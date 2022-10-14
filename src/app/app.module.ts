@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { APP_BASE_HREF } from '@angular/common';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -12,6 +11,8 @@ import { NgBrazil } from 'ng-brazil';
 import { TextMaskModule } from 'angular2-text-mask';
 import { CustomFormsModule } from 'ng2-validation'
 import { NavegacaoModule } from './navegacao/navegacao-module';
+import { ProdutoService } from './demos/arquitetura-componentes/services/produto.service';
+import { MenuComponent } from './navegacao/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { NavegacaoModule } from './navegacao/navegacao-module';
     AppRoutingModule
   ],
   providers: [
+    ProdutoService
   ],
   bootstrap: [AppComponent]
 })
