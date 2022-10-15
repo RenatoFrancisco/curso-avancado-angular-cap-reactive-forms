@@ -12,6 +12,7 @@ import { TextMaskModule } from 'angular2-text-mask';
 import { CustomFormsModule } from 'ng2-validation'
 import { NavegacaoModule } from './navegacao/navegacao-module';
 import { ProdutoService } from './demos/arquitetura-componentes/services/produto.service';
+import { ProdutoResolve } from './demos/arquitetura-componentes/services/produto.resolve';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ProdutoService } from './demos/arquitetura-componentes/services/produto
     AppRoutingModule
   ],
   providers: [
-    ProdutoService
+    ProdutoService,
+    ProdutoResolve
   ],
   bootstrap: [AppComponent]
 })
