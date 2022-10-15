@@ -12,7 +12,6 @@ import { TextMaskModule } from 'angular2-text-mask';
 import { CustomFormsModule } from 'ng2-validation'
 import { NavegacaoModule } from './navegacao/navegacao-module';
 import { ProdutoService } from './demos/arquitetura-componentes/services/produto.service';
-import { MenuComponent } from './navegacao/menu/menu.component';
 
 @NgModule({
   declarations: [

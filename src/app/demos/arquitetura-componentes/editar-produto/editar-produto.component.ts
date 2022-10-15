@@ -24,7 +24,7 @@ export class EditarProdutoComponent implements OnInit {
       });
   }
 
-  salvar(){
+  salvar() {
     // fazer comunicacao com backend
 
     this.router.navigate(['/produtos']);
