@@ -13,6 +13,7 @@ import { CustomFormsModule } from 'ng2-validation'
 import { NavegacaoModule } from './navegacao/navegacao-module';
 import { ProdutoService } from './demos/arquitetura-componentes/services/produto.service';
 import { ProdutoResolve } from './demos/arquitetura-componentes/services/produto.resolve';
+import { AuthGuard } from './services/app.guard';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ProdutoResolve } from './demos/arquitetura-componentes/services/produto
   ],
   providers: [
     ProdutoService,
-    ProdutoResolve
+    ProdutoResolve,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
