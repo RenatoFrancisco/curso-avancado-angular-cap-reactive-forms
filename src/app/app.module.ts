@@ -15,12 +15,14 @@ import { ProdutoService } from './demos/arquitetura-componentes/services/produto
 import { ProdutoResolve } from './demos/arquitetura-componentes/services/produto.resolve';
 import { AuthGuard } from './services/app.guard';
 import { CadastroGuard } from './services/cadastro.guard';
+import { FilmesComponent } from './demos/pipes/filmes/filmes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SobreComponent,
     CadastroComponent,
+    FilmesComponent
   ],
   imports: [
     BrowserModule,
