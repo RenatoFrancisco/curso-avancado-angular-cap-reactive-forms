@@ -14,6 +14,7 @@ import { NavegacaoModule } from './navegacao/navegacao-module';
 import { ProdutoService } from './demos/arquitetura-componentes/services/produto.service';
 import { ProdutoResolve } from './demos/arquitetura-componentes/services/produto.resolve';
 import { AuthGuard } from './services/app.guard';
+import { CadastroGuard } from './services/cadastro.guard';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AuthGuard } from './services/app.guard';
   providers: [
     ProdutoService,
     ProdutoResolve,
-    AuthGuard
+    AuthGuard,
+    CadastroGuard
   ],
   bootstrap: [AppComponent]
 })
