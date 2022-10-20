@@ -20,6 +20,7 @@ import { FileSizePipe } from './demos/pipes/filmes/filesize.pipe';
 import { ImageFormaterPipe } from './demos/pipes/filmes/image.pipe';
 import { BarService } from './demos/bar-di-zones/bar/bar.service';
 import { BarModule } from './demos/bar-di-zones/bar/bar.module';
+import { HttpClient } from '@angular/common/http';
 
 export const BAR_PROVIDERS: Provider[] = [
   BarService
@@ -43,7 +44,10 @@ export const BAR_PROVIDERS: Provider[] = [
     TextMaskModule,
     CustomFormsModule,
     AppRoutingModule,
-    BarModule
+    BarModule.forRoot({
+      unidadeId: 1000,
+      unidadeToken: 'asdcsdfvghnhgjhtrrrfewr54212'
+    })
   ],
   providers: [
     ProdutoService,

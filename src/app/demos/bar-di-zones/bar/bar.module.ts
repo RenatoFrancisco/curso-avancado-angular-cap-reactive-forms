@@ -1,16 +1,31 @@
 import { CommonModule } from "@angular/common";
-import { NgModule } from "@angular/core";
+import { ModuleWithProviders, NgModule } from "@angular/core";
 import { BarComponent } from "./bar.component";
+import { BarUnidadeConfig } from "./bar.config";
+import { BarService } from "./bar.service";
 
 @NgModule({
     imports: [
-        CommonModule
+        CommonModule,
     ],
     declarations: [
-        BarComponent
+        BarComponent,
     ],
     exports: [
         BarComponent
-    ]
+    ],
 })
-export class BarModule { }
+export class BarModule { 
+    static forRoot(config: BarUnidadeConfig) : ModuleWithProviders {
+        return {
+            ngModule: BarModule,
+            providers: [
+                { provide: 'ConfigManualUnidade', useValue: config }
+            ]
+        }
+    }
+
+    static forChild() {
+
+    }
+}
