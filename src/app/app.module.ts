@@ -21,6 +21,7 @@ import { ImageFormaterPipe } from './demos/pipes/filmes/image.pipe';
 import { BarService } from './demos/bar-di-zones/bar/bar.service';
 import { BarModule } from './demos/bar-di-zones/bar/bar.module';
 import { HttpClient } from '@angular/common/http';
+import { TodoComponent } from './demos/todo-list/todo/todo.component';
 
 export const BAR_PROVIDERS: Provider[] = [
   BarService
@@ -34,6 +35,7 @@ export const BAR_PROVIDERS: Provider[] = [
     FilmesComponent,
     FileSizePipe,
     ImageFormaterPipe,
+    TodoComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ export const BAR_PROVIDERS: Provider[] = [
     BarModule.forRoot({
       unidadeId: 1000,
       unidadeToken: 'asdcsdfvghnhgjhtrrrfewr54212'
-    })
+    }),
+    TodoComponent
   ],
   providers: [
     ProdutoService,
