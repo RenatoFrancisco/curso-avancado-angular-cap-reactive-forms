@@ -4,7 +4,7 @@ import { Task } from '../../task';
 @Component({
   selector: 'todo-list',
   templateUrl: './todo-list.component.html',
-  styles: ['./todo-list.component.css']
+  styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent {
 

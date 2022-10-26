@@ -6,7 +6,7 @@ import { TasksFinalizadasComponent } from './components/tasks-finalizadas/tasks-
 import { TasksIniciadasComponent } from './components/tasks-iniciadas/tasks-iniciadas.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { TodoComponent } from './todo.component';
-import { TodoService } from './todo.service';
+import { TasksService } from './todo.service';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
     HttpClientModule
   ],
   providers: [
-    TodoService
+    TasksService
   ],
   declarations: [
     TodoComponent,
