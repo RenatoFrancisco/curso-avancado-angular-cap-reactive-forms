@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { TasksService } from '../../todo.service';
+import { map } from 'rxjs/operators';
+import { Store } from '../../todo.store';
 
 @Component({
   selector: 'tasks-finalizadas',
@@ -10,10 +11,12 @@ export class TasksFinalizadasComponent implements OnInit {
 
   finalizados$: Observable<any[]>;
 
-  constructor(private taskService: TasksService) { }
+  constructor(private store: Store) { }
 
   ngOnInit() {
-    this.finalizados$ = this.taskService.getTodoList$;
+    this.finalizados$ = this.store.getTodoList()
+      .pipe(
+        map(todoList => todoList.filter(task => task.finalizado)));
   }
 
 }
