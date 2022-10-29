@@ -22,6 +22,17 @@ export class TasksService {
   //     return this.http.get<Task[]>('http://localhost:3000/todoList');
   // }
 
+  adicionar(task: Task) {
+    const value = this.store.value.todoList;
+
+    this.http
+      .post('http://localhost:3000/todoList/', task)
+      .subscribe(() => {
+        value.push(task);
+        this.store.set('todoList', value);
+      });
+  }
+
   toggle(event: any) {
     this.http
       .put(`http://localhost:3000/todoList/${event.task.id}`, event.task)

@@ -13,7 +13,7 @@ import { Store } from './todo.store';
 @NgModule({
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     TasksService,
