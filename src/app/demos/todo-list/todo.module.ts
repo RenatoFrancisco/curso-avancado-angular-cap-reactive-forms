@@ -9,11 +9,13 @@ import { TodoComponent } from './todo.component';
 import { TasksService } from './todo.service';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { Store } from './todo.store';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     TasksService,

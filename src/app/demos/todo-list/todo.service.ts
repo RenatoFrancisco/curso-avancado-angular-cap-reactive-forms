@@ -22,12 +22,17 @@ export class TasksService {
   //     return this.http.get<Task[]>('http://localhost:3000/todoList');
   // }
 
-  adicionar(task: Task) {
-    const value = this.store.value.todoList;
-
+  add(task: Task) {
+    
     this.http
-      .post('http://localhost:3000/todoList/', task)
-      .subscribe(() => {
+    .post('http://localhost:3000/todoList/', task)
+    .subscribe(() => {
+
+        const value = this.store.value.todoList;
+        task.id = value.slice(-1).pop().id + 1;
+        task.finalizado = false;
+        task.iniciado = false;
+
         value.push(task);
         this.store.set('todoList', value);
       });
